@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <div>
+        <h1>user form</h1>
+    </div>
+    <form method="post">
+        <div>
+            {% csrf_token %}
+            <div>
+                <label for="number 1">number 1</label>
+                <input type="text" name="number 1">
+            </div>
+            <div>
+                <label for="number 2">number 2</label>
+                <input type="text" name="number 2">
+            </div>
+            <div>
+                <input type="submit" value="sum">
+            </div>
+            <div>
+                <input type="text" value="{{output}}">
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}
